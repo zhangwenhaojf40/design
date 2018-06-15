@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<android.support.design.widget.AppBarLayout
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    android:layout_height="256dp">
+    <!--contentScrim  颜色渐变-->
+
+
+
+
+<android.support.design.widget.CollapsingToolbarLayout
+    android:layout_width="match_parent"
+    android:id="@+id/collToolBar"
+    app:contentScrim="?attr/colorPrimary"
+    android:fitsSystemWindows="true"
+
+    app:layout_scrollFlags="scroll|exitUntilCollapsed"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:fitsSystemWindows="true"
+        android:id="@+id/mIvTop"
+        android:scaleType="centerCrop"
+
+        app:layout_collapseMode="parallax"
+
+        android:layout_height="match_parent" />
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:id="@+id/mToolbar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_collapseMode="pin"
+        android:layout_height="?attr/actionBarSize">
+
+    </android.support.v7.widget.Toolbar>
+</android.support.design.widget.CollapsingToolbarLayout>
+</android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_scrolling" />
+
+</android.support.design.widget.CoordinatorLayout>
